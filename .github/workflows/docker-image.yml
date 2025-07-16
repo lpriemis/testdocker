@@ -8,8 +8,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4        
         with:
-          username: lpriemis
-          password: dckr_pat_2oa-60ivj0S5ZR6EjQnPmbrV9Dg
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: build image
         run: docker build ./ -t lpriemis/dockertest:latest
       - name: push image to docker hub
