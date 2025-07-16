@@ -5,6 +5,7 @@ FROM python:3.12
 COPY . . 
 
 # Install any requirements
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Run Python program
