@@ -6,7 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4        
+        with:
+          username: lpriemis
+          password: dckr_pat_2oa-60ivj0S5ZR6EjQnPmbrV9Dg
       - name: build image
         run: docker build ./ -t lpriemis/dockertest:latest
       - name: push image to docker hub
